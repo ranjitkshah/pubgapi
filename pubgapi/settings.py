@@ -25,7 +25,7 @@ SECRET_KEY = '=@8w7g*0m#pg1x!(^r=u+a8l&rr7lcvt$#9k4uc7_u2^9q-2=8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ranpubgapi.herokuapp.com','127.0.0.1']
 
 
 # Application definition
