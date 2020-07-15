@@ -49,5 +49,9 @@ class Contactadmin(ImportExportModelAdmin):
     pass
 
 
+@admin.register(Notify)
+class Notifyadmin(ImportExportModelAdmin):
+    pass
+
 
 # Register your models here.

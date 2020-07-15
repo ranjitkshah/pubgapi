@@ -71,3 +71,9 @@ def home(request):
     return render(request,'home.html')
 
 
+def home(request):
+    notifys=Notify.objects.all()
+    params={'notifys':notifys}
+    return render(request,'home.html',params)
+
+

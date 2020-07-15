@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+  <link rel="icon" href="https://img.icons8.com/color/96/000000/pubg-helmet.png" type="image/icon type">
 
 
   <!-- Bootstrap CSS -->
@@ -17,88 +18,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <title>Pubg API</title>
-  <!-- <style>
-    @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+  <title>PUBG-API</title>
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Concert One', cursive !important;
-}
-
-
-.how{
-    font-size: 40px !important;
-}
-
-.mid-section{
-    margin-top: 30px;
-    display: flex;
-
-}
-.btn{
-    background-color:lightgrey !important;
-    color: black !important ;
-}
-
-.itemlist{
-    display: flex;
-}
-
-.main-card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-
-.footer-title{
-    color: lightgrey;
-    display: flex;
-  
-    margin: 20px;
-}
-
-.footer{
-  margin-top: 50px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-  background-color: black;
-  height: 10vh;
-
-}
-
-
-.list{
-    margin-left: 20px;
-}
-
-.head{
-    font-size: 30px;
-}
-
-
-.contact-title{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 25px ;
-    background-color:lightblue;
-    border-radius: 0px 0px 10px 10px;
-    padding: 10px 0px;
-    
-    
-}
-
-
-
-  </style> -->
 </head>
 
 
@@ -116,28 +37,28 @@
     </a>
   </nav>
 
-  <div class="accordion" id="accordionExample">
-    <div class="card">
-      <div class="card-header" id="headingOne">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Release V1.0 !!
-          </button>
-        </h2>
-      </div>
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-        <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
-          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-          haven't heard of them accusamus labore sustainable VHS.
+  {% for i in notifys %}
+
+  
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              {{i.title}}
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            {{i.content}}
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+  {% endfor %}
 
   <div class="jumbotron my-2">
     <h1 class="display-6">Hello, Developers!</h1>
@@ -358,17 +279,17 @@
 
     submitclick.addEventListener('submit', runevent);
 
-      function runevent(e) {
+    function runevent(e) {
 
       // e.preventDefault();
-    
+
       alertify.alert('your suggestion is submitted', 'we will get back to you soon ',
         function () { alertify.success('Thanks for feedback'); });
 
-      
-    
 
-      
+
+
+
 
 
 
