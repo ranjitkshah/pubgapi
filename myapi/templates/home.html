@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{%static '/css/home.css' %}">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <title>Pubg API</title>
+</head>
+
+<body>
+  <!-- Image and text -->
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">
+      <img src="https://img.icons8.com/color/96/000000/pubg-helmet.png" width="30" height="30"
+        class="d-inline-block align-top" alt="" loading="lazy">
+      PUBG API
+    </a>
+    <a href="/api">
+
+      <button type="button" class="btn btn-light">API ROOT</button>
+    </a>
+  </nav>
+
+  <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Release V1.0 !!
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim
+          keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
+          butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+          haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron my-2">
+    <h1 class="display-6">Hello, Developers!</h1>
+    <p class="lead">This is a simple REST-API made by using Django-rest-framework, In this api roots you will find
+      the all the details of gun , medicines & equipment of pubg mobile in the form JSON , which can developers use to
+      develop a website which helps a player to analyse the guns & improve their gameplay
+    </p>
+    <p class="lead">
+      It is on the current basis , I will update it if any comes
+    </p>
+    <hr class="my-4">
+    <a class="btn btn-light" role="">Check all roots below</a>
+  </div>
+
+  <button type="button" class="btn btn-light my-2 btn-lg mx-3 how">Documentation :</button>
+  <div class="card  ">
+    <div class="card-header text-center head   ">
+      How to use api roots?
+    </div>
+    <div class="card-body ">
+      <h5 class="card-title">For routes click on right top button Api root</h5>
+      <p class="card-text">URls defined as "/api/type" where type belongs from below:-</p>
+      <ul class="list">
+        <li> <a href="/api/ar"> "api/ar" </a> path shows all automatic Rifle details </li>
+        <li> <a href="/api/smg"> "api/smg" </a> path shows all shot-machine gun details </li>
+        <li> <a href="/api/dmr"> "api/dmr" </a> path shows all marksman Rifle details </li>
+        <li> <a href="/api/lmg"> "api/lmg" </a> path shows all light-machine gun details </li>
+        <li> <a href="/api/sniper"> "api/sniper" </a> path shows all sniper Rifle details </li>
+        <li> <a href="/api/pistol"> "api/pistol" </a> path shows all pistol details </li>
+        <li> <a href="/api/shotgun"> "api/shotgun" </a> path shows all shotgun details </li>
+        <li> <a href="/api/other"> "api/other" </a> path shows all melee weapon details </li>
+        <li> <a href="/api/health"> "api/health" </a> path shows all medicines details </li>
+        <li> <a href="/api/grip"> "api/grip" </a> path shows all grip and add on details </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div class="card my-3 main-card ">
+    <h5 class="card-header head">Details/terms of API</h5>
+    <div class="card-body">
+      <h5 class="card-title"> Guntype </h5>
+      <img src="https://img.icons8.com/bubbles/100/000000/gun.png" />
+    </div>
+    <div class="card">
+
+      <p class="card-text mx-2 my-2">All the terms of gun details described below</p>
+
+      <div class="itemlist">
+        <ul class="card-text mx-5 my-2">
+          <li>
+            "name" : Gun name
+          </li>
+          <li>
+            "ammo" : ammo type used in game
+          </li>
+          <li>
+            "mag" : rounds per magazine non-extended
+          </li>
+          <li>
+            "ext_mag" : rounds per magazine extended
+          </li>
+          <li>
+            "fire_rate" : seconds between shots
+          </li>
+          <li>
+            "damage" : initial damage to 100 health player
+          </li>
+          <li>
+            "bullet_speed" : bullet speed m/s
+          </li>
+          <li>
+            "rload" : seconds to reload
+          </li>
+          <li>
+            "shot_range" : ReferenceDistance from game files
+          </li>
+          <li>
+            "scoped_spread" : spread * scoped modifier
+            Lower is better, less spread while scoped
+          </li>
+          <li>
+            "dps" : damage / rate
+          </li>
+
+
+        </ul>
+
+
+
+      </div>
+
+      <a href="/api/ar" class="btn btn-primary mx-2 my-2">Check API example</a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Medicines </h5>
+      <img src="https://img.icons8.com/bubbles/100/000000/doctors-bag.png" />
+    </div>
+    <div class="card">
+
+      <p class="card-text mx-2 my-2">All the terms of Medicines details described below</p>
+      <div class="itemlist">
+        <ul class="card-text mx-5 my-2">
+          <li>
+            "name" : Medicine name
+          </li>
+          <li>
+            "health_gained" : Health Gained
+          </li>
+          <li>
+            "action_time" : Action time
+          </li>
+          <li>
+            "boost_bar" : Boost Bar fill
+          </li>
+          <li>
+            "duration" : Duration
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+      <a href="/api/health" class="btn btn-primary mx-2 my-2">Check API</a>
+    </div>
+
+
+    <div class="card-body">
+      <h5 class="card-title">Grips and addons </h5>
+      <img src="https://img.icons8.com/color/96/000000/rifle-magazine.png" />
+    </div>
+    <div class="card">
+
+      <p class="card-text mx-2 my-2">All the terms of Grips and addons details described below</p>
+      <div class="itemlist">
+        <ul class="card-text mx-5 my-2">
+          <li>
+            "name" : Grip & addon name
+          </li>
+          <li>
+            "DRP" : DecreaseRecoilPatternScale
+          </li>
+          <li>
+            "H_recoil" : RecoilMultiplierHorizontal
+          </li>
+          <li>
+            "V_recoil" : RecoilMultiplierVertical
+          </li>
+          <li>
+            "sway" : SwayMultiplier
+          </li>
+          <li>
+            "kick_animation" : AnimationKickMultiplier
+          </li>
+          <li>
+            "dec_adsSpeed" : ADSSpeedMultiplier
+          </li>
+        </ul>
+
+
+
+      </div>
+
+      <a href="/api/grip" class="btn btn-primary mx-2 my-2">Check API</a>
+    </div>
+  </div>
+
+  <div class="contact-form mx-5">
+    <span class="contact-title my-5">Changes/Suggestions</span>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form-group ">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email" for="email"
+          aria-describedby="emailHelp" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Suggest any changes</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" for="message" rows="3"
+          required></textarea>
+      </div>
+      <button type="submit" id="submitcon" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <span class="footer-title">Developed By <a href="https://meghalbisht.github.io/Ranjit-Resume/"> ranjitkshah </a>
+      </span>
+      <div class="footer-img">
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  <script>
+    let submitclick = document.querySelector('#submitcon');
+    let name = document.getElementById('exampleInputEmail1')
+    let message = document.getElementById('exampleFormControlTextarea1')
+
+
+    submitclick.addEventListener('submit', runevent);
+
+      function runevent(e) {
+
+      // e.preventDefault();
+      if(e.type==='submit'){
+      alertify.alert('your suggestion is submitted', 'we will get back to you soon ',
+        function () { alertify.success('Thanks for feedback'); });
+
+      }
+    
+
+      
+
+
+
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>
