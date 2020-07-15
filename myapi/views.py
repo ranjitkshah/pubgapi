@@ -66,7 +66,7 @@ def home(request):
          contact = Contact(email=email,message=message)
          contact.save()
          
-         return HttpResponse('')
+         return redirect('/')
 
     return render(request,'home.html')
 
