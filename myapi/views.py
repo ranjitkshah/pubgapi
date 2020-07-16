@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from django.shortcuts import redirect,render,HttpResponse
-
+from .forms import *
 from .serializers import *
 from .models import *
 
@@ -59,19 +59,34 @@ class gripViewSet(viewsets.ModelViewSet):
     serializer_class = gripSerializer
     http_method_names = ['get']
 
+# def contact(request):
+#     if request.method=='POST':
+#          email = request.POST.get('email')
+#          message = request.POST.get('message')
+#          contact = ContactForm(email=email,message=message)
+#          if contact.is_valid():
+#             contact.save()
+#             return redirect('success')
+
+
+#     return render(request,'home.html')
+
+
+
+def success(request):
+    return render(request,'success.html')
+
 def home(request):
     if request.method=='POST':
-         email = request.POST.get('email')
-         message = request.POST.get('message')
-         contact = Contact(email=email,message=message)
-         contact.save()
-         
-         return redirect('/')
-
-    return render(request,'home.html')
-
-
-def home(request):
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        data={'email':email,'message':message}
+        contact = ContactForm(data=data)
+        # print(email)
+        # print(message)
+        if contact.is_valid():
+            contact.save()
+            return redirect('success')
     notifys=Notify.objects.all()
     params={'notifys':notifys}
     return render(request,'home.html',params)

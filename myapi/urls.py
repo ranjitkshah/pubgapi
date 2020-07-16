@@ -18,7 +18,8 @@ router.register(r'grip', views.gripViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('api/', include(router.urls)),
-     path('',views.home,name='home'),
+    path('',views.home,name='home'),
+    path('success/',views.success,name='success'),
     #  path('contact',views.contact,name='contact'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

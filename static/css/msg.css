@@ -1,0 +1,12 @@
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.msg span{
+    font-size: 30px;
+    margin: 20px;
+}

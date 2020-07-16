@@ -6,7 +6,7 @@ from django.db import models
 
 class ContactForm(forms.ModelForm):
     class Meta:
-        model = contact
+        model = Contact
         fields = (
             'email',
             'message',
